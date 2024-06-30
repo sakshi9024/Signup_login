@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Update</th>
+            <th>Delete</th>
+           
+        </tr>
+        {% for i in data %}
+        <tr> 
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.age}}</td>
+            <th><a href="/update/{{i.id}}/"><i class="fa-regular fa-pen-to-square"></i></a></th>
+            <th><a href="/delete/{{i.id}}/"><i class="fa-solid fa-trash"></i></a></th>
+
+        </tr>
+        {% endfor %}
